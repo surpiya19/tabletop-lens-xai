@@ -2,6 +2,7 @@
 Step 3 (optional but recommended): validate the explanations.
 
   1. Held-out test       - does the model generalise to games it never saw?
+                           (also saves a held-out prediction for every game, 5-fold)
   2. Redundancy ablation - if FACET says two features are redundant, removing one
                            should barely hurt accuracy. Removing a non-redundant,
                            important feature should hurt clearly (control).
@@ -30,7 +31,7 @@ from lime.lime_tabular import LimeTabularExplainer
 from scipy.stats import spearmanr
 from sklearn.inspection import partial_dependence, permutation_importance
 from sklearn.metrics import mean_absolute_error, r2_score
-from sklearn.model_selection import RepeatedKFold, cross_val_score, train_test_split
+from sklearn.model_selection import KFold, RepeatedKFold, cross_val_score, train_test_split
 import shap
 
 from facet.data import Sample
@@ -97,6 +98,14 @@ for a in abl:
     a["delta_r2"] = a["r2"] - ref
 out["ablation"] = abl
 log("ablation done")
+
+# held-out prediction for every game: each is predicted by a model trained without it
+oof = np.zeros(len(games))
+for tr, te in KFold(n_splits=5, shuffle=True, random_state=SEED).split(games):
+    oof[te] = LGBMRegressor(**PARAMS).fit(X.iloc[tr], y.iloc[tr]).predict(X.iloc[te])
+pd.DataFrame({"name": games["name"], "heldout_pred": oof}).to_csv(ART / "heldout_predictions.csv", index=False)
+out["heldout_all"] = {"r2": r2_score(y, oof), "mae": mean_absolute_error(y, oof)}
+log(f"held-out predictions for all games: R2={out['heldout_all']['r2']:.3f}")
 
 # ---------------------------------------------------------------- 3. method comparison
 # a) global: mean |SHAP| vs permutation importance, both on the test set

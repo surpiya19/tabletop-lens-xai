@@ -97,14 +97,16 @@ def load_artifacts():
     syn = pd.read_csv(ART / "synergy.csv", index_col=0)
     red = pd.read_csv(ART / "redundancy.csv", index_col=0)
     board = pd.read_csv(ART / "leaderboard.csv")
+    ho_path = ART / "heldout_predictions.csv"
+    heldout = pd.read_csv(ho_path).set_index("name")["heldout_pred"] if ho_path.exists() else None
     val_path = ART / "validation.json"
     val = json.loads(val_path.read_text()) if val_path.exists() else None
     games = pd.read_csv("data/games.csv")
-    return meta, sims, imp, syn, red, board, val, games
+    return meta, sims, imp, syn, red, board, val, games, heldout
 
 
 model, explainer = load_model()
-meta, sims, importance, synergy, redundancy, leaderboard, val, games = load_artifacts()
+meta, sims, importance, synergy, redundancy, leaderboard, val, games, heldout = load_artifacts()
 FEATURES, LABELS = meta["features"], meta["labels"]
 MECHS = [f for f in FEATURES if f.startswith("mech_")]
 CATS = [f for f in FEATURES if f.startswith("cat_")]
@@ -198,6 +200,9 @@ with t_pred:
     note = f"Higher than {pct:.0f}% of the games in the data."
     if real is not None:
         note += f" {ss.preset} is actually rated {real:.2f}."
+        if heldout is not None and ss.preset in heldout.index:
+            note += (f" It's in the training data, though: a model that never saw it predicts "
+                     f"{heldout[ss.preset]:.2f}.")
     st.markdown(f"""
 <div class='track-wrap'>
   <div class='track-head'>
