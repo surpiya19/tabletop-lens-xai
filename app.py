@@ -24,36 +24,35 @@ INK, PAPER, CARD = "#1B2A41", "#EDF0F4", "#F7F9FB"
 TEAL, BRICK, MEEPLE, MUTED, GRID = "#14807C", "#C24A32", "#E8A917", "#8692A6", "#D5DCE5"
 
 pio.templates["lens"] = go.layout.Template(layout=dict(
-    font=dict(family="Archivo, sans-serif", color=INK, size=13),
+    font=dict(family="Schibsted Grotesk, sans-serif", color=INK, size=13),
     paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
     colorway=[INK, TEAL, BRICK, MEEPLE, MUTED],
     xaxis=dict(gridcolor=GRID, zerolinecolor=MUTED, linecolor=GRID),
     yaxis=dict(gridcolor=GRID, zerolinecolor=MUTED, linecolor=GRID),
-    hoverlabel=dict(font_family="Archivo, sans-serif"),
+    hoverlabel=dict(font_family="Schibsted Grotesk, sans-serif"),
     margin=dict(l=10, r=10, t=30, b=10),
 ))
 pio.templates.default = "lens"
 
 st.markdown(f"""
 <style>
-  h1, h2, h3 {{ font-stretch: 125%; letter-spacing: -0.01em; }}
-  h1 {{ font-weight: 800 !important; font-size: 2.6rem !important; line-height: 1.05 !important; }}
+  h1, h2, h3 {{ letter-spacing: -0.015em; }}
+  h1 {{ font-weight: 800 !important; font-size: 2.9rem !important; line-height: 1.05 !important; }}
   h2 {{ font-weight: 750 !important; font-size: 1.45rem !important; }}
   h3 {{ font-weight: 700 !important; font-size: 1.1rem !important; }}
   .block-container {{ padding-top: 3.4rem; max-width: 1280px; }}
-  .wordmark {{ font-stretch: 125%; font-weight: 800; font-size: 0.95rem; color: {TEAL};
-               margin-bottom: 0.2rem; }}
+  .byline {{ font-weight: 600; color: #0E625E; margin: -0.6rem 0 0.6rem; }}
   .lede {{ font-size: 1.05rem; color: #4A5872; max-width: 62ch; margin-top: -0.4rem; }}
   [data-testid="stSidebar"] h2 {{ font-size: 1.25rem !important; }}
   [data-testid="stSidebar"] .stCaption, [data-testid="stSidebar"] small {{ color: #AEBBD0 !important; }}
   button[role="tab"] p {{ font-size: 0.98rem; font-weight: 600; }}
-  [data-testid="stMetricValue"] {{ font-stretch: 112%; font-weight: 750; }}
+  [data-testid="stMetricValue"] {{ font-weight: 750; }}
 
   /* the score track: the one loud element */
   .track-wrap {{ background: {CARD}; border: 1px solid {GRID}; border-radius: 6px;
                  padding: 1.2rem 1.4rem 3.3rem; margin: 0.4rem 0 1.4rem; }}
   .track-head {{ display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; }}
-  .track-score {{ font-stretch: 125%; font-weight: 800; font-size: 3.4rem; line-height: 1; color: {INK}; }}
+  .track-score {{ font-weight: 800; font-size: 3.4rem; line-height: 1; color: {INK}; }}
   .track-score small {{ font-size: 1.1rem; font-weight: 600; color: {MUTED}; }}
   .track-note {{ color: #4A5872; font-size: 1rem; }}
   .track {{ position: relative; display: grid; grid-template-columns: repeat(10, 1fr);
@@ -175,6 +174,7 @@ if ss.preset != "Your own design":
 
 # ------------------------------------------------------------------ header
 st.title("What makes a board game great?")
+st.markdown("<p class='byline'>Supriya Nannapaneni</p>", unsafe_allow_html=True)
 st.markdown(f"<p class='lede'>Design a game on the left. A model trained on "
             f"{meta['n_games']:,} BoardGameGeek games predicts how players would rate it, "
             "and shows you why.</p>", unsafe_allow_html=True)
@@ -656,4 +656,4 @@ with t_model:
         "- **Unusual designs are guesses.** A 12-player, 8-hour party game is unlike anything in the data.\n"
         "- **Explanations describe the model, not the world.** SHAP and FACET show what the model learned, "
         "biases included.")
-    st.caption("Data: TidyTuesday 2022-01-25 (BoardGameGeek). Built with FACET (BCG X), SHAP, LightGBM and Streamlit.")
+    st.caption("By Supriya Nannapaneni. Data: TidyTuesday 2022-01-25 (BoardGameGeek) and Google Trends. Built with FACET (BCG X), SHAP, LightGBM and Streamlit.")

@@ -13,7 +13,7 @@ from matplotlib.ticker import FixedFormatter, FixedLocator, NullLocator
 
 ART, FIG = Path("artifacts"), Path("figures")
 INK, PAPER, TEAL, BRICK, MUTED, GRID = "#1B2A41", "#EDF0F4", "#14807C", "#C24A32", "#8692A6", "#D5DCE5"
-font = Path("static/Archivo.ttf")
+font = Path("static/SchibstedGrotesk.ttf")
 font_manager.fontManager.addfont(str(font))
 plt.rcParams.update({
     "font.family": font_manager.FontProperties(fname=str(font)).get_name(), "font.size": 8,

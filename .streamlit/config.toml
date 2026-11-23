@@ -12,14 +12,14 @@ secondaryBackgroundColor = "#E2E7EE"
 textColor = "#1B2A41"
 linkColor = "#14807C"
 borderColor = "#C9D1DC"
-font = "Archivo, sans-serif"
-headingFont = "Archivo, sans-serif"
+font = "Schibsted Grotesk, sans-serif"
+headingFont = "Schibsted Grotesk, sans-serif"
 baseRadius = "small"
 baseFontSize = 15
 
 [[theme.fontFaces]]
-family = "Archivo"
-url = "app/static/Archivo.ttf"
+family = "Schibsted Grotesk"
+url = "app/static/SchibstedGrotesk.ttf"
 weight = "100 900"
 
 [theme.sidebar]

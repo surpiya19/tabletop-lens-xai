@@ -24,7 +24,7 @@ FIG.mkdir(exist_ok=True)
 INK, PAPER, TEAL, BRICK, MEEPLE, MUTED, GRID = ("#1B2A41", "#EDF0F4", "#14807C", "#C24A32",
                                                "#E8A917", "#8692A6", "#D5DCE5")
 
-font = Path("static/Archivo.ttf")
+font = Path("static/SchibstedGrotesk.ttf")
 if font.exists():
     font_manager.fontManager.addfont(str(font))
     plt.rcParams["font.family"] = font_manager.FontProperties(fname=str(font)).get_name()

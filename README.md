@@ -1,5 +1,7 @@
 # What makes a board game great?
 
+*By Supriya Nannapaneni*
+
 This is my explainable AI project for XAI (Fall '26). It's a small web app where you design
 an imaginary board game, and a model trained on about 8,000 BoardGameGeek games guesses how
 players would rate it. The interesting part isn't the prediction itself, it's the "why".
@@ -174,5 +176,5 @@ There are a few things worth keeping in mind:
   scraped from BoardGameGeek
 - Explanations: [FACET](https://github.com/BCG-X-Official/facet) by BCG X, SHAP and LIME
 - Model: LightGBM
-- App: Streamlit, with the Archivo font (SIL Open Font License)
+- App: Streamlit, with the Schibsted Grotesk font (SIL Open Font License)
 - Search data: Google Trends
