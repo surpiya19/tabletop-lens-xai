@@ -1,0 +1,30 @@
+[server]
+enableStaticServing = true
+
+[client]
+toolbarMode = "viewer"
+
+[theme]
+base = "light"
+primaryColor = "#1B2A41"
+backgroundColor = "#EDF0F4"
+secondaryBackgroundColor = "#E2E7EE"
+textColor = "#1B2A41"
+linkColor = "#14807C"
+borderColor = "#C9D1DC"
+font = "Archivo, sans-serif"
+headingFont = "Archivo, sans-serif"
+baseRadius = "small"
+baseFontSize = 15
+
+[[theme.fontFaces]]
+family = "Archivo"
+url = "app/static/Archivo.ttf"
+weight = "100 900"
+
+[theme.sidebar]
+backgroundColor = "#1B2A41"
+secondaryBackgroundColor = "#26395A"
+textColor = "#EDF0F4"
+primaryColor = "#E8A917"
+borderColor = "#34496B"

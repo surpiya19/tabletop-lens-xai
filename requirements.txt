@@ -1,0 +1,10 @@
+# Needed to RUN the webapp (also what Streamlit Community Cloud installs)
+streamlit==1.67.0
+pandas==2.3.3
+numpy==2.4.6
+plotly==7.1.0
+shap==0.51.0
+lightgbm==4.7.0
+scikit-learn==1.7.2
+joblib==1.6.0
+scipy==1.17.1

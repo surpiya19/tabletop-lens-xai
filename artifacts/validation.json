@@ -1,0 +1,395 @@
+{
+  "holdout": {
+    "n_train": 6444,
+    "n_test": 1611,
+    "r2": 0.5205749379368191,
+    "mae": 0.39636597787893146,
+    "baseline_mae": 0.5971317835057783,
+    "cv_r2": 0.5374531236518579
+  },
+  "ablation": [
+    {
+      "dropped": "None (full model)",
+      "kind": "reference",
+      "r2": 0.5374531236518579,
+      "r2_std": 0.017693513006420396,
+      "importance_share": 0.0,
+      "delta_r2": 0.0
+    },
+    {
+      "dropped": "Min play time",
+      "kind": "redundant",
+      "r2": 0.5359506666180895,
+      "r2_std": 0.018028178602940797,
+      "importance_share": 0.031009603251182,
+      "delta_r2": -0.0015024570337683896
+    },
+    {
+      "dropped": "Simulation mechanic",
+      "kind": "redundant",
+      "r2": 0.5367073021530019,
+      "r2_std": 0.01754047609412128,
+      "importance_share": 0.012716760842896,
+      "delta_r2": -0.0007458214988560474
+    },
+    {
+      "dropped": "Wargame category",
+      "kind": "redundant",
+      "r2": 0.535021343692718,
+      "r2_std": 0.01733706267280892,
+      "importance_share": 0.0393882359381016,
+      "delta_r2": -0.0024317799591399014
+    },
+    {
+      "dropped": "Wargame + Simulation",
+      "kind": "redundant",
+      "r2": 0.5340903129515457,
+      "r2_std": 0.018533277090161747,
+      "importance_share": 0.0521049967809976,
+      "delta_r2": -0.003362810700312191
+    },
+    {
+      "dropped": "Play time",
+      "kind": "redundant",
+      "r2": 0.5274138912146256,
+      "r2_std": 0.01792765959149272,
+      "importance_share": 0.1303502537056737,
+      "delta_r2": -0.01003923243723237
+    },
+    {
+      "dropped": "Number of mechanics",
+      "kind": "control",
+      "r2": 0.5150580754674607,
+      "r2_std": 0.017139925144226274,
+      "importance_share": 0.1598935048133669,
+      "delta_r2": -0.022395048184397193
+    },
+    {
+      "dropped": "Release year",
+      "kind": "control",
+      "r2": 0.43758675421846205,
+      "r2_std": 0.014608782061375126,
+      "importance_share": 0.2477141656055285,
+      "delta_r2": -0.09986636943339589
+    }
+  ],
+  "global_compare": {
+    "spearman": 0.8940886699507388,
+    "top5_overlap": 5,
+    "shap": {
+      "year": 0.2819,
+      "min_players": 0.0308,
+      "max_players": 0.0801,
+      "play_time": 0.1455,
+      "min_play_time": 0.0396,
+      "min_age": 0.0622,
+      "n_mechanics": 0.1616,
+      "mech_dice_rolling": 0.022,
+      "mech_hand_management": 0.0075,
+      "mech_variable_player_powers": 0.0065,
+      "mech_set_collection": 0.008,
+      "mech_card_drafting": 0.0105,
+      "mech_area_majority_influence": 0.0019,
+      "mech_modular_board": 0.0108,
+      "mech_tile_placement": 0.0063,
+      "mech_cooperative_game": 0.0034,
+      "mech_grid_movement": 0.0043,
+      "mech_simulation": 0.0076,
+      "mech_action_points": 0.002,
+      "cat_card_game": 0.0117,
+      "cat_fantasy": 0.009,
+      "cat_wargame": 0.0318,
+      "cat_economic": 0.0102,
+      "cat_fighting": 0.0134,
+      "cat_science_fiction": 0.0022,
+      "cat_dice": 0.0108,
+      "cat_party_game": 0.0044,
+      "cat_animals": 0.0023,
+      "cat_adventure": 0.0119
+    },
+    "permutation": {
+      "year": 0.4381,
+      "min_players": 0.0085,
+      "max_players": 0.0563,
+      "play_time": 0.1396,
+      "min_play_time": 0.0146,
+      "min_age": 0.0672,
+      "n_mechanics": 0.1912,
+      "mech_dice_rolling": 0.0089,
+      "mech_hand_management": 0.0028,
+      "mech_variable_player_powers": 0.0004,
+      "mech_set_collection": 0.0026,
+      "mech_card_drafting": 0.0037,
+      "mech_area_majority_influence": 0.0001,
+      "mech_modular_board": 0.0003,
+      "mech_tile_placement": 0.0,
+      "mech_cooperative_game": 0.0008,
+      "mech_grid_movement": 0.0017,
+      "mech_simulation": 0.0035,
+      "mech_action_points": 0.0013,
+      "cat_card_game": 0.0071,
+      "cat_fantasy": 0.0057,
+      "cat_wargame": 0.0178,
+      "cat_economic": 0.0068,
+      "cat_fighting": 0.0081,
+      "cat_science_fiction": 0.0008,
+      "cat_dice": 0.0055,
+      "cat_party_game": 0.0019,
+      "cat_animals": 0.0019,
+      "cat_adventure": 0.0027
+    }
+  },
+  "local_compare": {
+    "n_games": 50,
+    "top5_overlap_mean": 0.56,
+    "top3_sign_agreement": 0.9399999999999998,
+    "rank_corr_mean": 0.4164729064039408,
+    "top5_overlap_hist": {
+      "1": 6,
+      "2": 12,
+      "3": 20,
+      "4": 10,
+      "5": 2
+    }
+  },
+  "pdp_compare": {
+    "play_time": {
+      "values": [
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0
+      ],
+      "facet": [
+        -0.1348381389031985,
+        -0.0925190668553233,
+        -0.025609301182420552,
+        0.03729728650771236,
+        0.05834150333033605,
+        0.16288043194765578,
+        0.27568872715808457,
+        0.2619391236224482,
+        0.2592665983125686,
+        0.34231698009493083,
+        0.36034025763586097,
+        0.3760102414960338
+      ],
+      "pdp": [
+        -0.1348381389031985,
+        -0.0925190668553233,
+        -0.025609301182420552,
+        0.03729728650771236,
+        0.05834150333033605,
+        0.16288043194765578,
+        0.27568872715808457,
+        0.2619391236224482,
+        0.2592665983125686,
+        0.34231698009493083,
+        0.36034025763586097,
+        0.3760102414960338
+      ],
+      "max_abs_diff": 0.0
+    },
+    "n_mechanics": {
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0
+      ],
+      "facet": [
+        -0.41925088880868167,
+        -0.21297845162051843,
+        -0.10368335392547845,
+        -0.018043030212285593,
+        0.07302443517917379,
+        0.12353222460430757,
+        0.22684530768754207,
+        0.31674656427818615,
+        0.39664492774830684,
+        0.41674804450236635,
+        0.4452098024680211
+      ],
+      "pdp": [
+        -0.41925088880868167,
+        -0.21297845162051843,
+        -0.10368335392547845,
+        -0.018043030212285593,
+        0.07302443517917379,
+        0.12353222460430757,
+        0.22684530768754207,
+        0.31674656427818615,
+        0.39664492774830684,
+        0.41674804450236635,
+        0.4452098024680211
+      ],
+      "max_abs_diff": 0.0
+    },
+    "year": {
+      "values": [
+        1980.0,
+        1985.0,
+        1990.0,
+        1995.0,
+        2000.0,
+        2005.0,
+        2010.0,
+        2015.0,
+        2020.0
+      ],
+      "facet": [
+        -0.37669461328564857,
+        -0.3790766435720787,
+        -0.3066149216979488,
+        -0.22914553575992613,
+        -0.26241273417423283,
+        -0.22693861171292173,
+        -0.042375483738523734,
+        0.09320006502107514,
+        0.6221446022173094
+      ],
+      "pdp": [
+        -0.37669461328564857,
+        -0.3790766435720787,
+        -0.3066149216979488,
+        -0.22914553575992613,
+        -0.26241273417423283,
+        -0.22693861171292173,
+        -0.042375483738523734,
+        0.09320006502107514,
+        0.6221446022173094
+      ],
+      "max_abs_diff": 0.0
+    }
+  },
+  "stability": {
+    "n_runs": 5,
+    "n_inspect": 1500,
+    "importance_spearman_mean": 0.9588669950738913,
+    "importance_spearman_min": 0.9389162561576353,
+    "top5_frequency": {
+      "year": 5,
+      "n_mechanics": 5,
+      "play_time": 5,
+      "max_players": 5,
+      "min_age": 5
+    },
+    "importance_mean": {
+      "year": 0.2423,
+      "min_players": 0.0258,
+      "max_players": 0.0832,
+      "play_time": 0.1309,
+      "min_play_time": 0.0327,
+      "min_age": 0.0646,
+      "n_mechanics": 0.1614,
+      "mech_dice_rolling": 0.0184,
+      "mech_hand_management": 0.0074,
+      "mech_variable_player_powers": 0.0058,
+      "mech_set_collection": 0.0182,
+      "mech_card_drafting": 0.0165,
+      "mech_area_majority_influence": 0.0041,
+      "mech_modular_board": 0.0141,
+      "mech_tile_placement": 0.0044,
+      "mech_cooperative_game": 0.0061,
+      "mech_grid_movement": 0.0057,
+      "mech_simulation": 0.0107,
+      "mech_action_points": 0.0035,
+      "cat_card_game": 0.0107,
+      "cat_fantasy": 0.0093,
+      "cat_wargame": 0.0371,
+      "cat_economic": 0.0157,
+      "cat_fighting": 0.0194,
+      "cat_science_fiction": 0.0041,
+      "cat_dice": 0.0168,
+      "cat_party_game": 0.0106,
+      "cat_animals": 0.0037,
+      "cat_adventure": 0.0168
+    },
+    "importance_std": {
+      "year": 0.0056,
+      "min_players": 0.0028,
+      "max_players": 0.0044,
+      "play_time": 0.0074,
+      "min_play_time": 0.0007,
+      "min_age": 0.0034,
+      "n_mechanics": 0.0064,
+      "mech_dice_rolling": 0.0027,
+      "mech_hand_management": 0.0014,
+      "mech_variable_player_powers": 0.0006,
+      "mech_set_collection": 0.0024,
+      "mech_card_drafting": 0.001,
+      "mech_area_majority_influence": 0.0008,
+      "mech_modular_board": 0.0019,
+      "mech_tile_placement": 0.001,
+      "mech_cooperative_game": 0.0015,
+      "mech_grid_movement": 0.001,
+      "mech_simulation": 0.0027,
+      "mech_action_points": 0.0011,
+      "cat_card_game": 0.0021,
+      "cat_fantasy": 0.0014,
+      "cat_wargame": 0.0047,
+      "cat_economic": 0.003,
+      "cat_fighting": 0.0032,
+      "cat_science_fiction": 0.0012,
+      "cat_dice": 0.0039,
+      "cat_party_game": 0.0016,
+      "cat_animals": 0.001,
+      "cat_adventure": 0.0025
+    },
+    "redundancy": {
+      "play_time|min_play_time": {
+        "mean": 0.11957723544310953,
+        "std": 0.02534584075216697,
+        "min": 0.07588341044745361,
+        "max": 0.1378170752982301
+      },
+      "cat_wargame|mech_simulation": {
+        "mean": 0.1721204437180784,
+        "std": 0.05496925901413771,
+        "min": 0.11253840581886737,
+        "max": 0.2308025381681947
+      },
+      "play_time|cat_wargame": {
+        "mean": 0.187167785210038,
+        "std": 0.0030557888255915303,
+        "min": 0.18367897235647687,
+        "max": 0.1915370203033974
+      }
+    },
+    "synergy": {
+      "min_age|year": {
+        "mean": 0.21273079346474053,
+        "std": 0.04300757436009209,
+        "min": 0.13638151364137782,
+        "max": 0.2382261491558241
+      },
+      "min_play_time|year": {
+        "mean": 0.20348297844202942,
+        "std": 0.014289487455933496,
+        "min": 0.18773108928261018,
+        "max": 0.22166040084462016
+      },
+      "cat_fighting|year": {
+        "mean": 0.18944898501631244,
+        "std": 0.05583290790292981,
+        "min": 0.13119356055838208,
+        "max": 0.26330761340036024
+      }
+    }
+  }
+}

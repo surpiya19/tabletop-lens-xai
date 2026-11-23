@@ -1,0 +1,7 @@
+# Needed to re-run the FACET analysis (prepare_data.py + analyze.py)
+-r requirements.txt
+gamma-facet==2.2.2
+sklearndf==2.4.2
+gamma-pytools==3.0.3
+matplotlib==3.11.2
+lime==0.2.0.1

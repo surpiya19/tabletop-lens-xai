@@ -1,0 +1,231 @@
+{
+  "features": [
+    "year",
+    "min_players",
+    "max_players",
+    "play_time",
+    "min_play_time",
+    "min_age",
+    "n_mechanics",
+    "mech_dice_rolling",
+    "mech_hand_management",
+    "mech_variable_player_powers",
+    "mech_set_collection",
+    "mech_card_drafting",
+    "mech_area_majority_influence",
+    "mech_modular_board",
+    "mech_tile_placement",
+    "mech_cooperative_game",
+    "mech_grid_movement",
+    "mech_simulation",
+    "mech_action_points",
+    "cat_card_game",
+    "cat_fantasy",
+    "cat_wargame",
+    "cat_economic",
+    "cat_fighting",
+    "cat_science_fiction",
+    "cat_dice",
+    "cat_party_game",
+    "cat_animals",
+    "cat_adventure"
+  ],
+  "numeric": [
+    "year",
+    "min_players",
+    "max_players",
+    "play_time",
+    "min_play_time",
+    "min_age",
+    "n_mechanics"
+  ],
+  "labels": {
+    "year": "Release year",
+    "min_players": "Min players",
+    "max_players": "Max players",
+    "play_time": "Play time (min)",
+    "min_play_time": "Min play time (min)",
+    "min_age": "Minimum age",
+    "n_mechanics": "Number of mechanics",
+    "mech_dice_rolling": "Dice Rolling",
+    "mech_hand_management": "Hand Management",
+    "mech_variable_player_powers": "Variable Player Powers",
+    "mech_set_collection": "Set Collection",
+    "mech_card_drafting": "Card Drafting",
+    "mech_area_majority_influence": "Area Majority / Influence",
+    "mech_modular_board": "Modular Board",
+    "mech_tile_placement": "Tile Placement",
+    "mech_cooperative_game": "Cooperative Game",
+    "mech_grid_movement": "Grid Movement",
+    "mech_simulation": "Simulation",
+    "mech_action_points": "Action Points",
+    "cat_card_game": "Card Game",
+    "cat_fantasy": "Fantasy",
+    "cat_wargame": "Wargame",
+    "cat_economic": "Economic",
+    "cat_fighting": "Fighting",
+    "cat_science_fiction": "Science Fiction",
+    "cat_dice": "Dice",
+    "cat_party_game": "Party Game",
+    "cat_animals": "Animals",
+    "cat_adventure": "Adventure"
+  },
+  "defaults": {
+    "year": 2012.0,
+    "min_players": 2.0,
+    "max_players": 4.0,
+    "play_time": 45.0,
+    "min_play_time": 45.0,
+    "min_age": 10.0,
+    "n_mechanics": 3.0,
+    "mech_dice_rolling": 0.0,
+    "mech_hand_management": 0.0,
+    "mech_variable_player_powers": 0.0,
+    "mech_set_collection": 0.0,
+    "mech_card_drafting": 0.0,
+    "mech_area_majority_influence": 0.0,
+    "mech_modular_board": 0.0,
+    "mech_tile_placement": 0.0,
+    "mech_cooperative_game": 0.0,
+    "mech_grid_movement": 0.0,
+    "mech_simulation": 0.0,
+    "mech_action_points": 0.0,
+    "cat_card_game": 0.0,
+    "cat_fantasy": 0.0,
+    "cat_wargame": 0.0,
+    "cat_economic": 0.0,
+    "cat_fighting": 0.0,
+    "cat_science_fiction": 0.0,
+    "cat_dice": 0.0,
+    "cat_party_game": 0.0,
+    "cat_animals": 0.0,
+    "cat_adventure": 0.0
+  },
+  "ranges": {
+    "year": [
+      1960.0,
+      2021.0
+    ],
+    "min_players": [
+      1.0,
+      8.0
+    ],
+    "max_players": [
+      1.0,
+      12.0
+    ],
+    "play_time": [
+      5.0,
+      480.0
+    ],
+    "min_play_time": [
+      5.0,
+      480.0
+    ],
+    "min_age": [
+      0.0,
+      18.0
+    ],
+    "n_mechanics": [
+      0.0,
+      15.0
+    ],
+    "mech_dice_rolling": [
+      0.0,
+      1.0
+    ],
+    "mech_hand_management": [
+      0.0,
+      1.0
+    ],
+    "mech_variable_player_powers": [
+      0.0,
+      1.0
+    ],
+    "mech_set_collection": [
+      0.0,
+      1.0
+    ],
+    "mech_card_drafting": [
+      0.0,
+      1.0
+    ],
+    "mech_area_majority_influence": [
+      0.0,
+      1.0
+    ],
+    "mech_modular_board": [
+      0.0,
+      1.0
+    ],
+    "mech_tile_placement": [
+      0.0,
+      1.0
+    ],
+    "mech_cooperative_game": [
+      0.0,
+      1.0
+    ],
+    "mech_grid_movement": [
+      0.0,
+      1.0
+    ],
+    "mech_simulation": [
+      0.0,
+      1.0
+    ],
+    "mech_action_points": [
+      0.0,
+      1.0
+    ],
+    "cat_card_game": [
+      0.0,
+      1.0
+    ],
+    "cat_fantasy": [
+      0.0,
+      1.0
+    ],
+    "cat_wargame": [
+      0.0,
+      1.0
+    ],
+    "cat_economic": [
+      0.0,
+      1.0
+    ],
+    "cat_fighting": [
+      0.0,
+      1.0
+    ],
+    "cat_science_fiction": [
+      0.0,
+      1.0
+    ],
+    "cat_dice": [
+      0.0,
+      1.0
+    ],
+    "cat_party_game": [
+      0.0,
+      1.0
+    ],
+    "cat_animals": [
+      0.0,
+      1.0
+    ],
+    "cat_adventure": [
+      0.0,
+      1.0
+    ]
+  },
+  "baseline_rating": 6.685921787709497,
+  "n_games": 8055,
+  "best_model": "LGBMRegressor",
+  "best_params": {
+    "learning_rate": "0.03",
+    "n_estimators": "300",
+    "num_leaves": "31"
+  },
+  "cv_r2_mean": 0.5374531236518579
+}
