@@ -2,6 +2,8 @@
 
 *By Supriya Nannapaneni*
 
+Code: [github.com/surpiya19/tabletop-lens-xai](https://github.com/surpiya19/tabletop-lens-xai)
+
 This is my explainable AI project for XAI (Fall '26). It's a small web app where you design
 an imaginary board game, and a model trained on about 8,000 BoardGameGeek games guesses how
 players would rate it. The interesting part isn't the prediction itself, it's the "why".
@@ -16,9 +18,11 @@ pretty good fit for that, since a lot of the features obviously overlap.
 
 ## Running it
 
-You'll need Python 3.11 to 3.13. From this folder:
+You'll need Python 3.11 to 3.13. Grab the code, then set it up:
 
 ```bash
+git clone https://github.com/surpiya19/tabletop-lens-xai.git
+cd tabletop-lens-xai
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
