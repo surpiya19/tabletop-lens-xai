@@ -111,7 +111,8 @@ FEATURES, LABELS = meta["features"], meta["labels"]
 MECHS = [f for f in FEATURES if f.startswith("mech_")]
 CATS = [f for f in FEATURES if f.startswith("cat_")]
 BASE = meta["baseline_rating"]
-PRESETS = ["Gloomhaven", "Wingspan", "Pandemic", "Catan", "Codenames", "Monopoly Cheaters Edition"]
+PRESETS = ["Gloomhaven", "Dead of Winter: A Crossroads Game", "7 Wonders", "Pandemic Legacy: Season 1",
+           "Wingspan", "Pandemic", "Catan", "Codenames", "Monopoly Cheaters Edition"]
 PRESETS = [p for p in PRESETS if p in set(games["name"])]
 
 
